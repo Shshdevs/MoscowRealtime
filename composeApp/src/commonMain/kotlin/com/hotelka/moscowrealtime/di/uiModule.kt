@@ -9,7 +9,6 @@ import com.hotelka.moscowrealtime.presentation.navigation.Navigator
 import com.hotelka.moscowrealtime.presentation.viewmodel.AnalyzeImageViewModel
 import com.hotelka.moscowrealtime.presentation.viewmodel.AuthViewModel
 import com.hotelka.moscowrealtime.presentation.viewmodel.NetworkMonitorViewModel
-import com.hotelka.moscowrealtime.presentation.viewmodel.NotificationsHandler
 import com.hotelka.moscowrealtime.presentation.viewmodel.CurrentUserProfileViewModel
 import com.hotelka.moscowrealtime.presentation.viewmodel.DiscoverPageViewModel
 import com.hotelka.moscowrealtime.presentation.viewmodel.EventGraphViewModel
@@ -31,7 +30,6 @@ val uiModule = module {
     single<MenuHandler> { MenuHandler(get()) }
     single<MapController> { MapControllerImpl(get()) }
     single<MapManager> { MapManager(get(), RouteBuilder(get())) }
-    single { NotificationsHandler(get()) }
     viewModel<NetworkMonitorViewModel> { NetworkMonitorViewModel(get()) }
 
     viewModel<HomeViewModel> {
