@@ -39,15 +39,14 @@ fun CameraFrame(
             navigateBack
         )
         menuContent(
-            { analyzeImageViewModel.pickFromGallery(); menuHandler.updateMenuVisible(false) },
+            { analyzeImageViewModel.pickFromGallery{menuHandler.updateMenuVisible(menuVisible)}; menuHandler.updateMenuVisible(false) },
             { analyzeImageViewModel.takePic(); menuHandler.updateMenuVisible(false) }
         )
         RequestFrame(
             modifier = Modifier.padding(top = 40.dp).fillMaxSize(),
             requestState = requestState,
-            onRecognized = { onRecognized(it) { analyzeImageViewModel.resetRequestState(); menuHandler.updateMenuVisible(menuVisible) } },
+            onRecognized = { onRecognized(it) { analyzeImageViewModel.resetRequestState() }},
             onDismissRequest = { analyzeImageViewModel.resetRequestState(); menuHandler.updateMenuVisible(menuVisible) },
-            onContinue = { analyzeImageViewModel.resetRequestState(); menuHandler.updateMenuVisible(menuVisible) }
         )
     }
 }

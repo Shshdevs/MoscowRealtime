@@ -42,7 +42,7 @@ fun ScannerPageContent(
         onRecognized = { discover, resetRequestState ->
             recognizedDiscover = discover; resetRequestState()
         },
-        menuVisible = false,
+        menuVisible = true,
         navigateBack = navigateBack,
         menuContent = { pickFromGallery, takePic ->
             Box(

@@ -78,7 +78,7 @@ fun RequestFrame(
 
                             RequestState.Unrecognized -> {
                                 RunningRequestUnrecognizedCard(
-                                    modifier = Modifier.fillMaxWidth(),
+                                    modifier = Modifier.fillMaxSize(),
                                     onContinueQuest = onContinue
                                 )
                             }

@@ -44,21 +44,12 @@ fun DefaultCameraPreview(
             content = {
                 PermissionsCard(
                     permission = Res.string.storage_permission,
-                    onDismiss = {
-                        navigateBack()
-                    }
+                    onDismiss = { navigateBack() }
                 )
             }
         )
     } else {
-        val imageSaverPlugin = rememberImageSaverPlugin(
-            config = ImageSaverConfig(
-                isAutoSave = false,
-                prefix = "MoscowRealtime_",
-                directory = Directory.PICTURES,
-                customFolderName = "MoscowRealtime"
-            )
-        )
+        val imageSaverPlugin = rememberImageSaverPlugin(ImageSaverConfig(false))
         CameraPreview(
             modifier = Modifier.fillMaxSize(),
             cameraConfiguration = {
@@ -81,7 +72,7 @@ fun handleCameraPermissions(): Boolean{
     if (!cameraPermissionState.value) {
         permissions.RequestCameraPermission(
             onGranted = {cameraPermissionState.value = true},
-            onDenied = { cameraPermissionState.value = false;}
+            onDenied = { cameraPermissionState.value = false}
         )
         return cameraPermissionState.value
     } else {

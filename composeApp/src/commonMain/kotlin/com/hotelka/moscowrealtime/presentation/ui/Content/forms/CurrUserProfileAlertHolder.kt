@@ -21,21 +21,21 @@ fun CurrUserProfileAlertHolder(
     changeOrg: Boolean,
     acceptQuestInvitationAlert: Boolean,
     email: String,
-    onDeleteAccount:() -> Unit,
-    onChangePassword: (String)-> Unit,
-    onCreateOrganization:(String) -> Unit,
-    onRestartProgress:() -> Unit,
-    onLogOut:() -> Unit,
+    onDeleteAccount: () -> Unit,
+    onChangePassword: (String) -> Unit,
+    onCreateOrganization: (String) -> Unit,
+    onRestartProgress: () -> Unit,
+    onLogOut: () -> Unit,
     onClose: () -> Unit,
-    onChangeOrg:() -> Unit
+    onChangeOrg: () -> Unit
 ) {
-    if (acceptQuestInvitationAlert){
+    if (acceptQuestInvitationAlert) {
         AcceptQuestInvitationAlert(
             onSubmit = onRestartProgress,
             onDismiss = onClose
         )
     }
-    if (createOrganization){
+    if (createOrganization) {
         CreateOrganizationAlert(
             onDismissDialog = onClose,
             onCreateOrganization = onCreateOrganization
@@ -43,10 +43,8 @@ fun CurrUserProfileAlertHolder(
     }
     if (deleteAccountAlert) {
         DeleteAccountAlert(
-            {
-                onDeleteAccount()
-            },
-            onClose
+            onSubmit = onDeleteAccount,
+            onDismissRequest = onClose
         )
     }
     if (changePassword) {
@@ -67,7 +65,7 @@ fun CurrUserProfileAlertHolder(
         )
     }
 
-    if (changeOrg){
+    if (changeOrg) {
         ChangeOrganizationAlert(
             onSubmit = onChangeOrg,
             onDismiss = onClose

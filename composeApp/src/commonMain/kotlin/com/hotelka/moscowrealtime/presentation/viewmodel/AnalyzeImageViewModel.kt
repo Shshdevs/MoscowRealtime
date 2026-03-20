@@ -46,10 +46,11 @@ class AnalyzeImageViewModel(
         }
     }
 
-    fun pickFromGallery() {
+    fun pickFromGallery(onDismiss:() -> Unit) {
         viewModelScope.launch {
             val platformFile = FileKit.openFilePicker(type = FileKitType.Image)
             if (platformFile == null) {
+                onDismiss()
                 return@launch
             }
             analyzeImage(platformFile.readBytes())

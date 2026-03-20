@@ -23,7 +23,7 @@ import org.jetbrains.compose.resources.stringResource
 @Composable
 fun PermissionsCard(permission: StringResource, onDismiss: () -> Unit) {
     DismissableCardFrame(
-        modifier = Modifier.padding(top = 230.dp),
+        modifier = Modifier.padding(top = 170.dp),
         onDismissRequest = onDismiss,
         content = {
             Spacer(Modifier.height(60.dp))

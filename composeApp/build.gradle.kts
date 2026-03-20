@@ -162,6 +162,10 @@ android {
             "String", "SUPABASE_KEY",
             localProperties.getProperty("SUPABASE_KEY", ""),
         )
+        buildConfigField(
+            "String", "DEFAULT_PLACEHOLDER",
+            localProperties.getProperty("DEFAULT_PLACEHOLDER_URL", ""),
+        )
     }
 
 }
