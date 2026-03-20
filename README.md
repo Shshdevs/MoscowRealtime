@@ -67,6 +67,6 @@ DEFAULT_PLACEHOLDER_URL="ссылка_на_изображение_заглушк
 ```
 
 3. В iosApp необходимо добавить GoogleServices-Info.plist от Firebase
-4. Выполнить podInstall
+4. Выполнить pod install в iosApp
 5. Закрыть проект и открыть MoscowRealtime.xcworkspace (НЕ MoscowRealtime.xcodeproj!)
 6. Запустить проект из Xcode
