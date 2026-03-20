@@ -6,6 +6,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -76,16 +81,18 @@ fun QuestMapContent(
         if (questProgressGraphUiModel.cameraModeOn) {
             CameraFrame(
                 onRecognized = { discover, resetRequestState ->
+                    var discover by remember{mutableStateOf(discover)}
                     val quest =
                         (questProgressGraphUiModel.questProgressUiState as QuestProgressUiState.Success).questProgressDetailed.quest
-                    onEvent(
-                        QuestProgressGraphEvents.OnVerifyResult(
-                            discover = discover.discover,
-                            questId = quest.id,
-                            score = if (discover.location?.id == quest.locations.last()) 15 else 5
+                    LaunchedEffect(discover.discover.id){
+                        onEvent(
+                            QuestProgressGraphEvents.OnVerifyResult(
+                                discover = discover.discover,
+                                questId = quest.id,
+                                score = if (discover.location?.id == quest.locations.last()) 15 else 5
+                            )
                         )
-                    )
-
+                    }
                     if (questProgressGraphUiModel.verificationQuestResult != null) {
                         RunningRequestSuccessCard(
                             modifier = Modifier.fillMaxSize(),
@@ -103,7 +110,7 @@ fun QuestMapContent(
                         RunningRequestWrongCard(
                             modifier = Modifier.fillMaxSize(),
                             visible = !questProgressGraphUiModel.verificationQuestResult.success,
-                            location = discover.location,
+                            location = discover.location!!,
                             onShowContinueToResult = {
                                 onEvent(QuestProgressGraphEvents.OnShowDiscover(discover))
                             },

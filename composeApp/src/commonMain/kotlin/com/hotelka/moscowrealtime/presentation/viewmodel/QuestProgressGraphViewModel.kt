@@ -21,6 +21,7 @@ import com.hotelka.moscowrealtime.presentation.navigation.Navigator
 import com.hotelka.moscowrealtime.presentation.state.QuestProgressUiState
 import com.hotelka.moscowrealtime.presentation.utils.filterSuccessfulDiscovers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -173,6 +174,7 @@ class QuestProgressGraphViewModel(
                 )
             }
             verificationJob?.start()
+            verificationJob?.invokeOnCompletion { verificationJob = null }
         }
         return verificationResult
     }
