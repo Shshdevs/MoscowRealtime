@@ -8,12 +8,8 @@ composeApp/build/
 iosApp/iosApp.xcworkspace/
 iosApp/Pods/
 .DS_Store
-gradlew
-gradlew.bat
 !gradle/wrapper/gradle-wrapper.jar
 composeApp/google-services.json
 iosApp/iosApp/GoogleService-Info.plist
 iosApp/iosApp/Info.plist
-iosApp/Podfile.lock
 composeApp/release/
-composeApp/src/main
