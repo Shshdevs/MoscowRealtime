@@ -8,7 +8,6 @@ composeApp/build/
 iosApp/iosApp.xcworkspace/
 iosApp/Pods/
 .DS_Store
-gradle/
 gradlew
 gradlew.bat
 !gradle/wrapper/gradle-wrapper.jar
