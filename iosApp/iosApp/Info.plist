@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>default_placeholder</key>
+	<string>https://epgoyhnajkbslbngqrlm.supabase.co/storage/v1/object/public/objects/Default_quest_cover.jpg</string>
+	<key>ymk_api_key</key>
+	<string>6ac91a45-27b3-4e65-9eae-df55c2a81659</string>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.moscowRT.locationUpdate</string>
+	</array>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.209201854769-641fk43luo9b1s703gu53aoqvd6i13f2</string>
+			</array>
+		</dict>
+	</array>
+	<key>GIDClientID</key>
+	<string>209201854769-641fk43luo9b1s703gu53aoqvd6i13f2.apps.googleusercontent.com</string>
+	<key>GIDServerClientID</key>
+	<string>209201854769-641fk43luo9b1s703gu53aoqvd6i13f2.apps.googleusercontent.com</string>
+	<key>SUPABASE_KEY</key>
+	<string>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVwZ295aG5hamtic2xibmdxcmxtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA4MTc1MjQsImV4cCI6MjA3NjM5MzUyNH0.8AII63wX-WlIGKvx7O8AyY_4jlt0b6CIegiyBc0AdIY</string>
+	<key>SUPABASE_URL</key>
+	<string>https://epgoyhnajkbslbngqrlm.supabase.co</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+		<string>location</string>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>https</string>
+		<string>http</string>
+	</array>
+</dict>
+</plist>

@@ -9,7 +9,4 @@ iosApp/iosApp.xcworkspace/
 iosApp/Pods/
 .DS_Store
 !gradle/wrapper/gradle-wrapper.jar
-composeApp/google-services.json
-iosApp/iosApp/GoogleService-Info.plist
-iosApp/iosApp/Info.plist
 composeApp/release/

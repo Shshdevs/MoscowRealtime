@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "209201854769",
+    "project_id": "moscow-realtime",
+    "storage_bucket": "moscow-realtime.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209201854769:android:e9328ed116fee49daa9810",
+        "android_client_info": {
+          "package_name": "com.hotelka.moscowrealtime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209201854769-dkfkbadjf0i2rc2disa087jkccv80q8m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBVinYmnuRW8wWR-ywhPGnB0awBu-Ls6I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209201854769-dkfkbadjf0i2rc2disa087jkccv80q8m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "209201854769-641fk43luo9b1s703gu53aoqvd6i13f2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hotelka.moscowrealtime"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
